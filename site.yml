@@ -1,0 +1,14 @@
+---
+#
+# Playbook to install the ELK stack + Beats
+#
+- hosts: localhost
+  remote_user: ubuntu
+  become: no
+  become_user: root
+  roles:
+  - { role: java }
+  - { role: elasticsearch }
+  - { role: kibana }
+  - { role: metricbeat }
+
